@@ -1,0 +1,8 @@
+pm.test("Response Body", () => {
+  const responseJson = pm.response.json();
+  for (const res of responseJson){
+      if(res.name == "Chelsey Dietrich" && res.address.zipcode == "33263"){
+            console.log("Verified that "+res.name + " has a zipcode " + res.address.zipcode)
+        }
+  }
+});
